@@ -56,7 +56,7 @@ def main():
     total_issues = len(vulnerabilities)
     total_dependencies = data.get("dependencyCount", 0)
 
-    now = datetime.now(timezone.utc).isoformat()
+    now = datetime.now(timezone.utc).isoformat(timespec="milliseconds")
 
     item = {
         "scan_id": {"S": str(uuid.uuid4())},
