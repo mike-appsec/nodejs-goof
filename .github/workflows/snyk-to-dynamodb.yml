@@ -45,3 +45,6 @@ jobs:
 
       - name: Push summary to DynamoDB
         run: python push_to_dynamodb.py results.json nodejs-goof npm
+
+      - name: Update Snyk console (monitor)
+        run: snyk monitor
